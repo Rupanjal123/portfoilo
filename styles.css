@@ -262,12 +262,5 @@ body {
     .navbar {
         position: relative;
     }
-    project-box {
-        width: 90%;
-        margin: 15px 0;
-    }
-
-    .project-box img {
-        height: 250px;
-    }
+  
 }
