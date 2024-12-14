@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +10,21 @@ body {
     color: #333;
 }
 
+/* :root for easy theme adjustments */
+:root {
+    --primary-color: #333;
+    --highlight-color: #FFD700;
+    --light-bg-color: #f4f4f4;
+    --white: #fff;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #333;
+    background-color: var(--primary-color);
     position: relative;
 }
 
@@ -25,9 +32,8 @@ body {
     font-size: 24px;
     font-weight: bold;
     padding: 5px;
-    color:white;
-    border :1px solid white;
-
+    color: var(--white);
+    border: 1px solid var(--white);
 }
 
 .nav-links {
@@ -40,12 +46,12 @@ body {
 }
 
 .nav-links li a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
 .nav-links li a:hover {
-    color: #FFD700;
+    color: var(--highlight-color);
 }
 
 /* Hamburger Menu */
@@ -58,7 +64,7 @@ body {
 .hamburger span {
     height: 3px;
     width: 25px;
-    background-color: white;
+    background-color: var(--white);
     margin: 4px;
     transition: 0.3s;
 }
@@ -67,7 +73,7 @@ body {
 .home {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--light-bg-color);
 }
 
 .home img {
@@ -82,7 +88,7 @@ body {
 }
 
 .home h1 span {
-    color: #FFD700;
+    color: var(--highlight-color);
 }
 
 .home p {
@@ -94,20 +100,20 @@ body {
 .about {
     text-align: center;
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 /* Skills Section */
 .skills {
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--light-bg-color);
 }
 
 .skills h1 {
     font-size: 32px;
     text-align: center;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--primary-color);
 }
 
 .skill-container {
@@ -123,7 +129,7 @@ body {
     text-align: center;
     margin: 10px;
     padding: 15px;
-    background-color: #fff;
+    background-color: var(--white);
     border: 2px solid #ddd;
     border-radius: 8px;
     transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
@@ -132,17 +138,18 @@ body {
 
 .skills .skill-box:hover {
     transform: scale(1.05);
-    background-color: #FFD700;
+    background-color: var(--highlight-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    color: white;
+    color: var(--white);
 }
+
 /* Projects Section */
 .projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .projects h1 {
@@ -153,7 +160,7 @@ body {
 
 .project-box {
     position: relative;
-    width: 45%; /* Adjust the size of each box */
+    width: 45%;
     margin: 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -164,8 +171,8 @@ body {
 
 .project-box img {
     width: 100%;
-    height: 300px; /* Set a fixed height */
-    object-fit: cover; /* Ensures the image covers the box without stretching */
+    height: 300px;
+    object-fit: cover;
     transition: filter 0.3s;
 }
 
@@ -179,7 +186,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: var(--white);
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 2;
@@ -195,14 +202,12 @@ body {
     border-radius: 8px;
 }
 
-
-
 /* Contact Section */
 .contact {
     text-align: center;
     padding: 50px 20px;
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .contact h1 {
@@ -215,7 +220,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: var(--primary-color);
         width: 100%;
         position: absolute;
         top: 70px;
@@ -235,8 +240,6 @@ body {
     .hamburger {
         display: flex;
     }
-    
-    
 
     .navbar {
         position: relative;
